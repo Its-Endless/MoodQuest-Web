@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip Planner</title>
+    <link rel="stylesheet" href="styles (1).css" />
+
+    <!-- Leaflet (map) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+      defer
+    ></script>
+  </head>
+  <body class="dark">
+    <div class="app-container">
+      <header>
+        <h1>Trip Planner</h1>
+        <button id="themeToggle" class="theme-btn">☀</button>
+      </header>
+
+      <main class="two-col">
+        <!-- Left: Chat -->
+        <section class="left-pane">
+          <div id="chat-container"></div>
+          <div id="typingIndicator" class="typing-indicator" style="display: none;">...</div>
+        </section>
+
+        <!-- Right: Map -->
+        <aside class="right-pane">
+          <div id="map"></div>
+        </aside>
+      </main>
+
+      <footer>
+        <textarea id="userPrompt" placeholder="What do you feel like doing?"></textarea>
+        <div class="buttons">
+          <button id="submitBtn">Submit</button>
+          <button id="reEvalBtn" disabled>Re-evaluate</button>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script (1).js" defer></script>
+  </body>
+</html>
